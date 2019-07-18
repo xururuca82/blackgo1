@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %} Cafe {% endblock %}
+
+{% block content %}
+
+<div class="container text-center">
+    <div class="row d-inline-block w-100">
+        <div class="p-5">
+            <h2>BLACKGO 추천 네이버 카페</h2>
+            <hr class="w-25 bg-secondary">
+        </div>
+        {% for cafe in object_list %}
+        <div class="card d-inline-block mr-3" style="width: 20%; border-radius: 2em 2em 0 0; ">
+          <img src="/static/img/naver_cafe_top.png" class="card-img-top" alt="">
+          <div class="card-body text-left">
+            <h5 class="card-title">{{cafe.cafe_name}}</h5>
+            <p class="card-text " style="min-height: 60px;">{{cafe.cafe_description}}</p>
+            <div class="text-right">
+              <a href="{{cafe.cafe_url}}" class="btn btn-success" target="_blank">Cafe Visit!</a>
+            </div>
+
+          </div>
+          <!--<img src="/static/img/naver_cafe_bottom.png" class="card-img-top" alt="...">-->
+        </div>
+
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

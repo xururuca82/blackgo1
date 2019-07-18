@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BLACK GO</title>
+
+    {% load static %}
+
+    <link href="/static/theme/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="/static/theme/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+    <link href="/static/theme/css/agency.min.css" rel="stylesheet">
+  <style>
+    #mainNav .navbar-nav .nav-item .black-nav-link {
+      padding: 0.5em 0.5em 0 0.5em!important;
+    }
+  </style>
+
+</head>
+<body id="page-top">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top pt-0 pb-0 pl-0" id="mainNav" style="background-color: rgba(33,37,41,0.9);">
+    <div class="sub-menu-background position-absolute w-100 d-none" style="height: 100px; top:53.28px; background-color: rgba(33,37,41,0.8);"></div>
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="/" style="font-size:1.25em;">BLACK GO</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav text-uppercase">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#services">준비하는 사람</a>
+            <div class="sub-menu position-absolute pl-2 d-none">
+              <ul class="list-unstyled text-light">
+                <li><a class="nav-link black-nav-link" href="{% url 'academy' %}" >학원정보</a></li>
+                <li><a class="nav-link black-nav-link" href="http://www.kice.re.kr/boardCnts/list.do?boardID=1500211&s=kice&searchStr=&m=030305" target="_blank">기출문제</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#portfolio">시작하는 사람</a>
+            <div class="sub-menu position-absolute pl-2 d-none">
+              <ul class="list-unstyled text-light">
+                <li><a class="nav-link black-nav-link" href="{% url 'cafeList' %}" >추천 카페</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#">검정정보</a>
+            <div class="sub-menu position-absolute pl-2 d-none">
+              <ul class="list-unstyled text-light">
+                <li><a class="nav-link black-nav-link" href="{% url 'entrance' %}" >대입정보</a></li>
+                <li><a class="nav-link black-nav-link" href="http://www.kukjagam.co.kr/00_main/main.php" target="_blank">시험일정</a></li>
+             </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </nav>
+
+
+  <!-- Header -->
+  <div class="bg-dark">
+  <header class="masthead">
+    <div class="container">
+      <div class="intro-text">
+        <div class="intro-lead-in">Welcome To Our Site!</div>
+        <div class="intro-heading text-uppercase">It's Nice To Meet You</div>
+        <!--<a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>-->
+      </div>
+    </div>
+  </header>
+  </div>
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="/static/theme/vendor/jquery/jquery.min.js"></script>
+    <script src="/static/theme/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="/static/theme/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Contact form JavaScript -->
+    <script src="/static/theme/js/jqBootstrapValidation.js"></script>
+    <script src="/static/theme/js/contact_me.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="/static/theme/js/agency.min.js"></script>
+
+  <script>
+      $(document).ready(function(){
+        $('.nav-item>.nav-link').mouseenter(function(){
+            $('.sub-menu-background').removeClass('d-none');
+            $('.sub-menu').addClass('d-none');
+            $(this).parent().find('.sub-menu').removeClass('d-none');
+        });
+
+        $('.sub-menu-background').mouseleave(function(){
+            $(this).addClass('d-none');
+            $('.sub-menu').addClass('d-none');
+        });
+
+      });
+
+  </script>
+</body>
+</html>
